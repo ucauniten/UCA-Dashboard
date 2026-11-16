@@ -184,7 +184,7 @@ async function getNextEvent() {
   }
   const n = CONFIG.nextEvent;
   if (n.name && n.date) { const d = new Date(n.date.replace(" ", "T") + "+08:00"); if (!isNaN(d)) return {name: n.name, start: d, venue: n.venue}; }
-  $("#cdDemo").hidden = false;
+ if ($("#cdDemo")) $("#cdDemo").hidden = false;
   return {name: "Flagship event (demo)", start: new Date(Date.now() + 30 * 864e5), venue: "Set your event in index.html"};
 }
 
