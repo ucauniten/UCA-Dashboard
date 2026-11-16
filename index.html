@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UNITEN Career Ambassador | Executive Dashboard | UNITEN</title>
+<meta name="description" content="Your network is your net worth">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#home" aria-label="UNITEN Career Ambassador">
+    <img class="brand-logo" src="uca-logo.png" alt="UNITEN Career Ambassador">
+  </a>
+  <div class="nav-mid">
+    <nav id="menu">
+      <a href="#home">Home</a><a href="#performance">Performance</a><a href="#calendar">Calendar</a>
+      <a href="#organization">Organization</a><a href="#analytics">Analytics</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch light or dark mode"><i class="fa-solid fa-sun"></i></button>
+    <button class="icon-btn burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <a class="uni-logo" href="https://www.uniten.edu.my/" rel="noopener" aria-label="UNITEN, Universiti Tenaga Nasional, The Energy University">
+    <img src="uniten-logo-white.png" alt="UNITEN, Universiti Tenaga Nasional, The Energy University">
+  </a>
+</header>
+
+<main>
+<!-- BANNER: overall committee photo -->
+<div class="banner">
+  <img src="committee.jpg" alt="The UNITEN Career Ambassador committee">
+</div>
+
+<!-- 1. MAIN PAGE -->
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <!-- TOP-LEFT: UCA Title -->
+    <div class="hero-title">
+      <p class="uni">Universiti Tenaga Nasional</p>
+      <h1>UNITEN Career Ambassador</h1>
+    </div>
+
+    <!-- TOP-RIGHT: Tagline over White Brush -->
+    <div class="hero-tagline-box">
+      <div class="brush-wrap">
+        <img class="brush-bg" src="Brush-White.png" alt="" aria-hidden="true">
+        <p class="tagline">
+          <span>Your Network</span>
+          <span>is Your
+            <span class="tagline-script">Net Worth
+              <svg viewBox="0 0 200 18" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M3 14 Q 100 4, 197 11" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+              </svg>
+            </span>
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <!-- BOTTOM-LEFT: Vision & Mission (macam sekarang) -->
+    <div class="hero-vm-box">
+      <div class="vm">
+        <div class="card"><h3><i class="fa-solid fa-eye"></i> Vision</h3><p>To develop professionals who excel in their craft, lead with heart, and inspire the world through their character</p></div>
+        <div class="card"><h3><i class="fa-solid fa-bullseye"></i> Mission</h3><p>UCA creates opportunities and experiences that nurture both professional competence and human character, developing individuals who excel in their careers, connect meaningfully with others, and contribute to a better world.</p></div>
+      </div>
+    </div>
+
+    <!-- BOTTOM-RIGHT: Next Upcoming Countdown -->
+    <aside class="card countdown">
+      <span class="badge red"><i class="fa-solid fa-star"></i> Next event</span>
+      <!-- <span class="badge" id="cdDemo" hidden>Demo</span> -->
+      <h2 id="cdName">Loading…</h2>
+      <p class="muted" id="cdMeta"></p>
+      <div id="cdTimer" class="cd-timer"></div>
+      <a class="btn" href="#calendar">View calendar</a>
+    </aside>
+  </div>
+</section>
+
+<!-- 2. PERFORMANCE STATISTIC (Google Sheet: performance) -->
+<section id="performance" class="block alt">
+  <div class="wrap">
+    <h2>Performance statistic <!-- <span class="badge red notice" data-sample="performance" hidden>Sample data</span>--></h2>
+    <h3 class="sub">Key performance indicators</h3>
+    <div id="kpiGrid" class="grid kpis"></div>
+    <h3 class="sub">Event counts</h3>
+    <div id="eventCounts" class="grid stats"></div>
+    <h3 class="sub">Strategic alignment</h3>
+    <div id="alignment" class="card tags"></div>
+  </div>
+</section>
+
+<!-- 3. CALENDAR (Google Calendar + Sheet: reports) -->
+<section id="calendar" class="block">
+  <div class="wrap">
+    <h2>Calendar</h2>
+    <div class="card cal">
+      <iframe src="https://calendar.google.com/calendar/embed?src=70818417956998c93dfd30d700c4814d5d32974628554ffdfb2a9692cd4335ef%40group.calendar.google.com&amp;ctz=Asia%2FKuala_Lumpur" title="Club event calendar" loading="lazy"></iframe>
+    </div>
+
+    <div class="reports-head gap">
+      <h3 class="sub">Event reports and impact <!-- <span class="badge red notice" data-sample="reports" hidden>Sample data</span>--></h3>
+      <div class="reports-tools">
+        <form id="reportSearchForm" class="search-box" role="search">
+          <input type="search" id="reportSearchInput" placeholder="Search event report…" aria-label="Search event reports">
+          <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </form>
+        <div class="scroll-btns">
+          <button type="button" class="icon-btn" id="repPrev" aria-label="Scroll reports left"><i class="fa-solid fa-chevron-left"></i></button>
+          <button type="button" class="icon-btn" id="repNext" aria-label="Scroll reports right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div id="reports" class="reports"></div>
+  </div>
+</section>
+
+<!-- 4. ORGANIZATION CHART -->
+<section id="organization" class="block alt">
+  <div class="wrap">
+    <h2>Organization chart</h2>
+    <h3 class="sub">Leadership chart</h3>
+    <!-- Photos: put each file in a "leads" folder next to index.html using the filename shown in its card.
+         Until the file exists, the person icon is shown. Portrait photos (4:5) look best. -->
+    <div class="lead-tree">
+      <div class="lead-root">
+        <div class="card person top">
+          <div class="photo"><img src="Ayman.png" alt="Ayman Zakaria" onerror="this.remove()"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <strong class="p-name">Ayman Zakaria</strong>
+          <span class="p-course">Electrical Engineering</span>
+          <span class="p-pos">Director</span>
+        </div>
+      </div>
+      <div class="lead-children">
+        <div class="lead-item">
+          <div class="card person">
+            <div class="photo"><img src="Adam.png" alt="Adam Niqris" onerror="this.remove()"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+            <strong class="p-name">Adam Niqris</strong>
+            <span class="p-course">Bachelor of Computer Science (Cybersecurity) Degree</span>
+            <span class="p-pos">Governance Officer</span>
+          </div>
+        </div>
+        <div class="lead-item">
+          <div class="card person">
+            <div class="photo"><img src="leads/lim-kian-yap.jpg" alt="Lim Kian Yap" onerror="this.remove()"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+            <strong class="p-name">Lim Kian Yap</strong>
+            <span class="p-course">Bachelor of Computer Science (Cybersecurity) Degree</span>
+            <span class="p-pos">Resource Officer</span>
+          </div>
+        </div>
+        <div class="lead-item">
+          <div class="card person">
+            <div class="photo"><img src="Darmesh.png" alt="Darmesh Saktivelu" onerror="this.remove()"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+            <strong class="p-name">Darmesh Saktivelu</strong>
+            <span class="p-course">Bachelor of Computer Science (Cybersecurity) Degree</span>
+            <span class="p-pos">Head of External Affairs and Communications</span>
+          </div>
+        </div>
+        <div class="lead-item">
+          <div class="card person">
+            <div class="photo"><img src="Raif.png" alt="Raif Fikri" onerror="this.remove()"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+            <strong class="p-name">Raif Fikri</strong>
+            <span class="p-course">Bachelor of Energy Economics</span>
+            <span class="p-pos">Head of Operations and Event Production</span>
+          </div>
+        </div>
+        <div class="lead-item">
+          <div class="card person">
+            <div class="photo"><img src="Nur-Nayli.png" alt="Nur Nayli Karmila" onerror="this.remove()"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+            <strong class="p-name">Nur Nayli Karmila</strong>
+            <span class="p-course">Bachelor of Computer Science (Cybersecurity) Degree</span>
+            <span class="p-pos">Head of Programmes and Initiatives Development</span>
+          </div>
+        </div>
+        <div class="lead-item">
+          <div class="card person">
+            <div class="photo"><img src="Atikah.png" alt="Atikah Nur Zulaikha" onerror="this.remove()"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+            <strong class="p-name">Atikah Nur Zulaikha</strong>
+            <span class="p-course">Bachelor of International Business</span>
+            <span class="p-pos">Head of Media and Engagement Strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ANALYTIC AND DEMOGRAPHIC (Google Sheet: demographics) -->
+<section id="analytics" class="block">
+  <div class="wrap">
+    <h2>Analytic and demographic <!-- <span class="badge red notice" data-sample="demographics" hidden>Sample data</span> --></h2>
+    <h3 class="sub">Committee counts</h3>
+    <div id="summary" class="grid stats"></div>
+    <div class="split">
+      <div><h3 class="sub">By college ratio</h3><div class="card donut-wrap"><div id="donutCollege" class="donut" role="img" aria-label="Members by college"></div><ul id="legendCollege" class="legend"></ul></div></div>
+      <div><h3 class="sub">By department ratio</h3><div class="card donut-wrap"><div id="donutDepartment" class="donut" role="img" aria-label="Members by department"></div><ul id="legendDepartment" class="legend"></ul></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- 6. PUBLIC INFORMATION / CONTACT -->
+<footer id="contact" class="foot">
+  <div class="wrap">
+    <h2>Public information</h2>
+    <div class="contact-grid">
+      <div class="contact-row"><i class="fa-solid fa-envelope"></i><div><small>Email</small><a href="mailto:uca@uniten.edu.my" target="_blank" rel="noopener noreferrer">uca@uniten.edu.my</a></div></div>
+      <div class="contact-row"><i class="fa-solid fa-handshake-angle"></i><div><small>Email, external affairs</small><a href="mailto:darmesh.uca@uniten.edu.my" target="_blank" rel="noopener noreferrer">darmesh.uca@uniten.edu.my</a></div></div>
+      <div class="contact-row"><i class="fa-brands fa-instagram"></i><div><small>Social media</small><a href="https://www.instagram.com/uniten_career_ambassador/" target="_blank" rel="noopener noreferrer">Instagram</a></div></div>
+      <div class="contact-row"><i class="fa-brands fa-linkedin"></i><div><small>Professional network</small><a href="https://www.linkedin.com/company/uniten-career-ambassador/home/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div>
+      <div class="contact-row"><i class="fa-solid fa-location-dot"></i><div><small>Location</small><a href="https://www.google.com/maps/search/?api=1&amp;query=Universiti+Tenaga+Nasional" target="_blank" rel="noopener noreferrer">Universiti Tenaga Nasional, Jalan IKRAM-UNITEN, 43000 Kajang, Selangor</a></div></div>
+    </div>
+    <p class="muted foot-note"><i class="fa-solid fa-shield-halved"></i> Public dashboard. Data last loaded: <span id="updated"></span></p>
+  </div>
+</footer>
+
+<script>
+/* Settings used by script.js. Edit here. */
+const CONFIG = {
+  calendar: {
+    id: "70818417956998c93dfd30d700c4814d5d32974628554ffdfb2a9692cd4335ef@group.calendar.google.com",                 // Calendar ID (Calendar settings > Integrate calendar). Needed for the countdown.
+    key: "AIzaSyAMhx7z2GDtV40OMfGSHd3RlzAzQWq96k4",                // Google API key (Calendar API enabled, restricted to your site)
+    tag: "[Flagship]"       // Put this in an event title to mark it as the flagship event
+  },
+  // Next event fallback, used only if the Google Calendar API is not connected. Date example: "2027-03-15 09:00" (Malaysia time)
+  nextEvent: {name: "", date: "", venue: ""},
+  // Google Sheets: File > Share > Publish to web > pick the tab > CSV, paste each link here.
+  sheets: {
+    performance: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtXeTeuxcoaWxwuyOaw2yHPnDliLuS7dh8uk7NngpXPnWsf_KdSoCuS0dQreM3uriLaNgDrj_K7hAW/pub?gid=0&single=true&output=csv",        // columns: group, label, value (group = events | alignment | kpi)
+    demographics: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtXeTeuxcoaWxwuyOaw2yHPnDliLuS7dh8uk7NngpXPnWsf_KdSoCuS0dQreM3uriLaNgDrj_K7hAW/pub?gid=1326731299&single=true&output=csv",       // columns: group, label, value (group = summary | college | year)
+    reports: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRtXeTeuxcoaWxwuyOaw2yHPnDliLuS7dh8uk7NngpXPnWsf_KdSoCuS0dQreM3uriLaNgDrj_K7hAW/pub?gid=1478484668&single=true&output=csv"             // columns: event, date, attendance, rating, summary, link
+  },
+  // Used until the "alignment" rows exist in the performance sheet.
+  alignment: [
+    ["Graduate Employability", "fa-solid fa-briefcase", "red"],
+    ["STEM and IR4.0", "fa-solid fa-microchip", "blue"],
+    ["SDG 4: Quality Education", "fa-solid fa-graduation-cap", "blue"],
+    ["SDG 8: Decent Work", "fa-solid fa-chart-line", "red"],
+    ["SDG 17: Partnerships", "fa-solid fa-handshake", "blue"]
+  ],
+  // Key performance indicators: [label, target text, rule, n]. rule: "min" = at least n | "band" = within +/- n | "" = no target
+  // Key performance indicators: [label, target text, rule, n]. rule: "min" = at least n | "band" = within +/- n | "" = no target
+  kpis: [
+    ["Overall attendance rate, minor events (%)", "", "", 0],
+    ["Overall attendance rate, major events (%)", "", "", 0],
+    ["Planned projects successfully completed (%)", "Target: 90% or more", "min", 90],
+    ["Member participation and engagement (%)", "Target: 80% or more", "min", 80]
+  ]
+};
+</script>
+<script src="script.js"></script>
+</body>
+</html>
